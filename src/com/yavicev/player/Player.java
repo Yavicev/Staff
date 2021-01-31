@@ -13,5 +13,5 @@ public interface Player {
 
     boolean isStaffChatToggle();
 
-    void setStaffChatToggle(boolean var1);
+    void setStaffChatToggle(boolean true);
 }
