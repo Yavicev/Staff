@@ -1,0 +1,8 @@
+main: com.yavicev.Main
+version: v1.0
+name: Staff
+author: Yavicev
+description: StaffChat
+commands:
+  sct:
+   usage: /sct
