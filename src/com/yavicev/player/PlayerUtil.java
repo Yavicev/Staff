@@ -27,8 +27,8 @@ public final class PlayerUtil {
     public static void init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException var3) {
-            var3.printStackTrace();
+        } catch (ClassNotFoundException nException) {
+            nException.printStackTrace();
         }
 
         String url = "jdbc:mysql://localhost:3306/data";
@@ -38,8 +38,8 @@ public final class PlayerUtil {
             Statement stmt = (Statement)CONNECTION.createStatement();
             stmt.execute("CREATE TABLE IF NOT EXISTS grouped_players (nickname VARCHAR(16) NOT NULL PRIMARY KEY, playerGroup TEXT NOT NULL, playerPrefix TEXT NOT NULL, isStaff TEXT NOT NULL, intPriority INT(16) NOT NULL)");
             stmt.close();
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
 
     }
@@ -54,8 +54,8 @@ public final class PlayerUtil {
             } else {
                 addPlayer(new CustomPlayer(name, "", "", false, 0, false));
             }
-        } catch (SQLException var3) {
-            var3.printStackTrace();
+        } catch (SQLException sql) {
+            sql.printStackTrace();
         }
 
     }
